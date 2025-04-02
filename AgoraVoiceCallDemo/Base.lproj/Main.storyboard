@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a86-a9-2fv">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--HomeVC-->
+        <scene sceneID="zUc-zz-DOf">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="a86-a9-2fv" customClass="HomeVC" customModule="AgoraVoiceCallDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s5b-v6-CCX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tvw-w9-HxD">
+                                <rect key="frame" x="20" y="40" width="335" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DLx-ow-lgm">
+                                <rect key="frame" x="20" y="597" width="335" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0JV-P9-gSu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Start Call"/>
+                                <connections>
+                                    <action selector="startCallBtnTouch:" destination="a86-a9-2fv" eventType="touchUpInside" id="NyP-el-9B5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HML-kt-w0d"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DLx-ow-lgm" firstAttribute="leading" secondItem="s5b-v6-CCX" secondAttribute="leading" constant="20" id="BWY-wa-7UY"/>
+                            <constraint firstAttribute="trailing" secondItem="DLx-ow-lgm" secondAttribute="trailing" constant="20" id="FtW-Db-QsE"/>
+                            <constraint firstItem="HML-kt-w0d" firstAttribute="trailing" secondItem="tvw-w9-HxD" secondAttribute="trailing" constant="20" id="KUX-4I-ovE"/>
+                            <constraint firstAttribute="bottom" secondItem="DLx-ow-lgm" secondAttribute="bottom" constant="20" id="ewj-Qo-ORA"/>
+                            <constraint firstItem="tvw-w9-HxD" firstAttribute="top" secondItem="HML-kt-w0d" secondAttribute="top" constant="20" id="ozY-um-ZT4"/>
+                            <constraint firstItem="tvw-w9-HxD" firstAttribute="leading" secondItem="HML-kt-w0d" secondAttribute="leading" constant="20" id="ssQ-dQ-jgQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="channelIdTF" destination="tvw-w9-HxD" id="mHH-Tt-v9i"/>
+                        <outlet property="startCallBtn" destination="DLx-ow-lgm" id="uVX-HJ-0Jo"/>
+                        <outlet property="startCallBtnBottom" destination="ewj-Qo-ORA" id="S4c-gl-uLb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qep-at-nc7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="-49"/>
+        </scene>
+        <!--Voice CallVC-->
+        <scene sceneID="yZX-UI-zbu">
+            <objects>
+                <viewController storyboardIdentifier="VoiceCallVC" id="Jdb-Ft-83D" customClass="VoiceCallVC" customModule="AgoraVoiceCallDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zz5-na-x07">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPR-gx-7NR">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="teq-aq-JV2">
+                                        <rect key="frame" x="20" y="333.5" width="335" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="24"/>
+                                        <color key="textColor" name="AppPrimaryFont"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="200" translatesAutoresizingMaskIntoConstraints="NO" id="5Xd-FU-d7x">
+                                        <rect key="frame" x="27.5" y="557" width="320" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgC-dl-oWf">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="L1w-AF-3gx"/>
+                                                    <constraint firstAttribute="height" constant="60" id="wDz-oA-hFZ"/>
+                                                </constraints>
+                                                <color key="tintColor" name="AppWhite"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="ic_call_connect"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="AppWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="acceptCallBtnTouch:" destination="Jdb-Ft-83D" eventType="touchUpInside" id="o5T-EH-0d2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6D1-Ee-TZ1">
+                                                <rect key="frame" x="260" y="0.0" width="60" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="AP3-m4-oYq"/>
+                                                    <constraint firstAttribute="width" constant="60" id="oRi-KS-751"/>
+                                                </constraints>
+                                                <color key="tintColor" name="AppWhite"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="ic_call_disconnect"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="30"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" name="AppWhite"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="endCallBtnTouch:" destination="Jdb-Ft-83D" eventType="touchUpInside" id="PZy-oF-8iq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="teq-aq-JV2" secondAttribute="trailing" constant="20" id="FC4-cs-cAZ"/>
+                                    <constraint firstItem="teq-aq-JV2" firstAttribute="leading" secondItem="fPR-gx-7NR" secondAttribute="leading" constant="20" id="QBX-kE-OHX"/>
+                                    <constraint firstItem="teq-aq-JV2" firstAttribute="centerY" secondItem="fPR-gx-7NR" secondAttribute="centerY" id="WCN-fG-Lw5"/>
+                                    <constraint firstAttribute="bottom" secondItem="5Xd-FU-d7x" secondAttribute="bottom" constant="50" id="ai6-PZ-2rJ"/>
+                                    <constraint firstItem="5Xd-FU-d7x" firstAttribute="centerX" secondItem="fPR-gx-7NR" secondAttribute="centerX" id="vp6-0T-Iap"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcK-wj-Yin">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkQ-ob-L0L">
+                                        <rect key="frame" x="20" y="333.5" width="335" height="0.0"/>
+                                        <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="14"/>
+                                        <color key="textColor" name="AppPrimaryFont"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xXc-Aj-11y">
+                                        <rect key="frame" x="157.5" y="587" width="60" height="60"/>
+                                        <subviews>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vak-F2-ZaO">
+                                                <rect key="frame" x="0.0" y="5" width="50" height="50"/>
+                                                <color key="backgroundColor" name="AppWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="7n8-QZ-Itr"/>
+                                                    <constraint firstAttribute="height" constant="50" id="J8O-ST-5u5"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="ic_mic_unmute"/>
+                                                <state key="selected" image="ic_mic_mute"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcs-3y-03n">
+                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="9F0-G8-LGX"/>
+                                                    <constraint firstAttribute="height" constant="60" id="M4W-JD-1CC"/>
+                                                </constraints>
+                                                <color key="tintColor" name="AppWhite"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="ic_call_disconnect"/>
+                                                <connections>
+                                                    <action selector="endCallBtnTouch:" destination="Jdb-Ft-83D" eventType="touchUpInside" id="ThZ-6t-cBv"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="mkQ-ob-L0L" firstAttribute="centerY" secondItem="zcK-wj-Yin" secondAttribute="centerY" id="Rlb-VB-Rey"/>
+                                    <constraint firstItem="mkQ-ob-L0L" firstAttribute="leading" secondItem="zcK-wj-Yin" secondAttribute="leading" constant="20" id="coo-VB-vWO"/>
+                                    <constraint firstAttribute="trailing" secondItem="mkQ-ob-L0L" secondAttribute="trailing" constant="20" id="esq-Hz-7Xe"/>
+                                    <constraint firstItem="xXc-Aj-11y" firstAttribute="centerX" secondItem="zcK-wj-Yin" secondAttribute="centerX" id="tub-P6-ZJ0"/>
+                                    <constraint firstAttribute="bottom" secondItem="xXc-Aj-11y" secondAttribute="bottom" constant="20" id="yui-j0-eRB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="04P-xx-jvz"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fPR-gx-7NR" secondAttribute="trailing" id="5Ya-T0-Dnt"/>
+                            <constraint firstItem="zcK-wj-Yin" firstAttribute="top" secondItem="zz5-na-x07" secondAttribute="top" id="IyZ-T1-mpM"/>
+                            <constraint firstItem="fPR-gx-7NR" firstAttribute="leading" secondItem="zz5-na-x07" secondAttribute="leading" id="PYD-p7-5Oi"/>
+                            <constraint firstItem="fPR-gx-7NR" firstAttribute="top" secondItem="zz5-na-x07" secondAttribute="top" id="gZf-fr-LQc"/>
+                            <constraint firstAttribute="bottom" secondItem="zcK-wj-Yin" secondAttribute="bottom" id="ghS-y6-mAo"/>
+                            <constraint firstItem="zcK-wj-Yin" firstAttribute="leading" secondItem="zz5-na-x07" secondAttribute="leading" id="kmc-sn-rrR"/>
+                            <constraint firstAttribute="trailing" secondItem="zcK-wj-Yin" secondAttribute="trailing" id="omI-8H-SFy"/>
+                            <constraint firstAttribute="bottom" secondItem="fPR-gx-7NR" secondAttribute="bottom" id="xgz-9g-5Rv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="acceptCallBtn" destination="rgC-dl-oWf" id="ie2-WP-aj4"/>
+                        <outlet property="callConnectedBtnStackView" destination="xXc-Aj-11y" id="ODk-F3-hbS"/>
+                        <outlet property="callConnectedContainer" destination="zcK-wj-Yin" id="TCG-qd-1bO"/>
+                        <outlet property="callDurationLabel" destination="mkQ-ob-L0L" id="BVP-FG-M1a"/>
+                        <outlet property="callingBtnStackView" destination="5Xd-FU-d7x" id="BMc-9b-MNw"/>
+                        <outlet property="callingContainer" destination="fPR-gx-7NR" id="kc0-H7-mpC"/>
+                        <outlet property="callingPersonNameLabel" destination="teq-aq-JV2" id="zqQ-JZ-Fnp"/>
+                        <outlet property="endCallBtn" destination="6D1-Ee-TZ1" id="xXg-YA-XyJ"/>
+                        <outlet property="endConnectedCallBtn" destination="Vcs-3y-03n" id="NUG-JU-7I4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fum-gJ-fTB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="874" y="-49"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_call_connect" width="32" height="32"/>
+        <image name="ic_call_disconnect" width="32" height="32"/>
+        <image name="ic_mic_mute" width="32" height="32"/>
+        <image name="ic_mic_unmute" width="32" height="32"/>
+        <namedColor name="AppPrimaryFont">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppWhite">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
