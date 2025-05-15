@@ -25,7 +25,7 @@ class VoiceCallVC: UIViewController {
     
     
     // MARK: - Properties
-    fileprivate let appIdStr = "71658792fb34415ab49ec47840e3d580"
+    fileprivate let appIdStr = ""
     
     fileprivate var agoraRTCKit : AgoraRtcEngineKit!
     

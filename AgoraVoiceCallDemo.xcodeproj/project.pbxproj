@@ -57,6 +57,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		122823D82DD5CD9A001D40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				12982CE92D6DF5BD0032AC92 /* VoiceCallVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		122823D92DD5CDA1001D40F2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				12982CE72D6DF5AD0032AC92 /* HomeVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		12982CA72D6DF34C0032AC92 = {
 			isa = PBXGroup;
 			children = (
@@ -80,9 +96,9 @@
 			children = (
 				12982CE42D6DF5710032AC92 /* AgoraVoiceCallDemo.entitlements */,
 				12982CD82D6DF3C50032AC92 /* Classes */,
-				12982CEF2D6EF06E0032AC92 /* ringtone.aiff */,
 				12982CD52D6DF38C0032AC92 /* Storyboards */,
 				12982CD62D6DF3AF0032AC92 /* Utilities */,
+				12982CEF2D6EF06E0032AC92 /* ringtone.aiff */,
 			);
 			path = AgoraVoiceCallDemo;
 			sourceTree = "<group>";
@@ -156,7 +172,7 @@
 		12982CE52D6DF58D0032AC92 /* Voice Call */ = {
 			isa = PBXGroup;
 			children = (
-				12982CE92D6DF5BD0032AC92 /* VoiceCallVC.swift */,
+				122823D82DD5CD9A001D40F2 /* Controller */,
 			);
 			name = "Voice Call";
 			sourceTree = "<group>";
@@ -164,7 +180,7 @@
 		12982CE62D6DF59E0032AC92 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				12982CE72D6DF5AD0032AC92 /* HomeVC.swift */,
+				122823D92DD5CDA1001D40F2 /* Controller */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -403,6 +419,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = "";
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AgoraVoiceCallDemo/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "We need access to your microphone for voice calls";
