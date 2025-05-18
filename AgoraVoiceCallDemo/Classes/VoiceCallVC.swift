@@ -9,7 +9,7 @@ import UIKit
 import AudioToolbox
 import AgoraRtcKit
 
-class VoiceCallVC: UIViewController {
+class VoiceCallVC: BaseVC {
     
     // MARK: - IBOutlets
     @IBOutlet weak var callingContainer: UIView!
